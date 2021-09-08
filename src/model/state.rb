@@ -30,7 +30,7 @@ module Model
 			]),
 			Model::Food.new(4, 4),
 			Model::Grid.new(8, 12),
-			Direction::DOWN
+			Direction::DOWN,
 			false
 		)
 	end
