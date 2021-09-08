@@ -7,14 +7,18 @@ module View
 				@pixel_size = 50
 		end
 
-		def render(state)
+		def start(state)
 			extend Ruby2D::DSL
 			set(title: "Snake", 
 					width: @pixel_size * state.grid.cols, 
-					height: @pixel_size * state.grid.rows)
-			render_food(state)
-			render_snake(state)
+					height: @pixel_size * state.grid.rows
+				)
 			show
+		end
+
+		def render_game(state)			
+			render_food(state)
+			render_snake(state)			
 		end
 
 		private
